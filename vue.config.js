@@ -1,4 +1,3 @@
-const path = require('path')
 const DEV_MODE = process.env.WEBPACK_TARGET === 'dev';
 
 function externals() {
@@ -9,15 +8,15 @@ function externals() {
 			amd: 'vue',
 			root: 'vue',
 		},
-		"vue-class-component": {
-			commonjs: "vue-class-component",
-			commonjs2: "vue-class-component",
+		'vue-class-component': {
+			commonjs: 'vue-class-component',
+			commonjs2: 'vue-class-component',
 			amd: 'vue-class-component',
 			root: 'vue-class-component',
 		},
-		"vue-property-decorator": {
-			commonjs: "vue-property-decorator",
-			commonjs2: "vue-property-decorator",
+		'vue-property-decorator': {
+			commonjs: 'vue-property-decorator',
+			commonjs2: 'vue-property-decorator',
 			amd: 'vue-property-decorator',
 			root: 'vue-class-component',
 		},
@@ -25,8 +24,8 @@ function externals() {
 }
 
 module.exports = {
-	chainWebpack: config => config.resolve.set( 'symlinks', false ),
+	chainWebpack: ( config ) => config.resolve.set( 'symlinks', false ),
 	configureWebpack: {
 		externals: [ externals() ],
 	},
-}
+};

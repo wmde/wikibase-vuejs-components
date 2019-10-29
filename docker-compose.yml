@@ -15,4 +15,3 @@ services:
             - NODE_DEBUG
             - NODE_ENV
             - DEBUG
-
