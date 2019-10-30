@@ -8,7 +8,11 @@ services:
         image: wmde/wikibase-vuejs-components 
         volumes:
             - '~/.npm:/.npm'
+            - './:/src:ro' # grant read access to allow e.g. jest watch to detect changes
             - './:/app'
         working_dir: /app
         environment:
             - NODE_DEBUG
+            - NODE_ENV
+            - DEBUG
+
