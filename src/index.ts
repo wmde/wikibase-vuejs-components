@@ -1,5 +1,5 @@
-import Sample from './components/Sample.vue';
+import ResizingTextField from './components/ResizingTextField.vue';
 
 export {
-	Sample,
+	ResizingTextField,
 };
